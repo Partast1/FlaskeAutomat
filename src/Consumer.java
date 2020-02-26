@@ -1,16 +1,18 @@
+import java.lang.reflect.Constructor;
 import java.util.Random;
 
 public class Consumer extends Thread {
     Buffer buf;
-SodaBuffer sodaBuf;
-BeerBuffer beerBuf;
+    SodaBuffer sodaBuf;
+    BeerBuffer beerBuf;
+//          Constructor
     public Consumer(Buffer buffer, SodaBuffer sBuffer, BeerBuffer bBuffer)
     {
         buf = buffer;
         sodaBuf = sBuffer;
         beerBuf = bBuffer;
     }
-
+//    takes drink instances out of buffer and depending on type sorts them
     @Override
     public void run() {
         while (true) {

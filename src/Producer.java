@@ -8,6 +8,8 @@ public class Producer extends Thread {
     {
         buf = buffer;
     }
+
+//    Produces either Soda or Beer depening on random
     @Override
     public void run() {
         while (true) {
